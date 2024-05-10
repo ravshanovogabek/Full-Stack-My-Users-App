@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Users index page</title>
+        <style>
+        th {
+            background-color: #52514E;
+            color: white;
+        }
+        tr:hover {
+            background-color: #DFDFDE;
+        }
+        tr:nth-child(even) {
+            background-color: #FF5733;
+        }
+
+        td, th {
+            border: 3px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+
+        table {
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Users</h1>
+        
+        <%=@users %>
+
+        <table>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+
+
+            <% for i in 0..@users.length - 1 do%>
+
+            <tr>
+                <td>
+                <%= @users[i]['firstname'] %>
+                </td>
+                <td>
+                <%= @users[i]['firstname'] %>
+                </td>
+                <td>
+                <%= @users[i]['firstname'] %>
+                </td>
+                <td>
+                <%= @users[i]['firstname'] %>
+                </td>
+                
+            </tr>
+
+            <%end%>
+        </table>
+    </body>
+</html>
